@@ -217,6 +217,8 @@ function handleUpdate(row) {
   const _id = row.id || ids.value
   getProject(_id).then(response => {
     form.value = response.data
+    // form.value.updateBy=null;
+    // form.value.updateTime=null;
     open.value = true
     title.value = "修改护理项目"
   })
